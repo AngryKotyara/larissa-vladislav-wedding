@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#4f6253" />
+  <meta name="description" content="Свадебное приглашение Larissa & Vladislav — 22 августа 2026" />
+  <title>Larissa & Vladislav — 22.08.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="Главный экран">
+      <img class="hero__image" src="assets/couple-main.jpeg" alt="Larissa и Vladislav на фоне гор" />
+      <div class="hero__veil"></div>
+      <div class="hero__content reveal">
+        <p class="eyebrow">Мы женимся</p>
+        <h1><span id="brideName">Larissa</span><em>&amp;</em><span id="groomName">Vladislav</span></h1>
+        <p class="hero__date" id="displayDate">22 августа 2026</p>
+      </div>
+      <a class="scroll-cue" href="#invitation" aria-label="Перейти к приглашению"><span></span></a>
+    </section>
+
+    <section class="section invitation" id="invitation">
+      <div class="paper-card reveal">
+        <p class="eyebrow">Для вас</p>
+        <h2 id="guestGreeting">Дорогие гости!</h2>
+        <p id="invitationText">Мы очень счастливы разделить с вами один из самых важных дней нашей жизни. Будем рады видеть вас на нашей свадьбе.</p>
+        <div class="ornament">✦</div>
+        <p class="invitation__date" id="invitationDate">22 августа 2026</p>
+      </div>
+    </section>
+
+    <section class="section countdown-section" aria-labelledby="countdown-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">До нашей свадьбы</p>
+        <h2 id="countdown-title">Осталось совсем немного</h2>
+      </div>
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div><strong id="days">—</strong><span>дней</span></div>
+        <div><strong id="hours">—</strong><span>часов</span></div>
+        <div><strong id="minutes">—</strong><span>минут</span></div>
+        <div><strong id="seconds">—</strong><span>секунд</span></div>
+      </div>
+      <p class="today-message" id="todayMessage" hidden>Сегодня наш день ❤</p>
+    </section>
+
+    <section class="story">
+      <div class="story__photo-wrap reveal">
+        <img src="assets/couple-story.jpeg" alt="Larissa и Vladislav смотрят друг на друга" class="story__photo" />
+      </div>
+      <div class="story__content section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Наша история</p>
+          <h2>Как всё начиналось</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="section venue" id="venue">
+      <div class="venue__image-wrap reveal">
+        <img src="assets/venue.jpeg" alt="Ресторан Усадьба в Петропавловске" class="venue__image" />
+      </div>
+      <div class="venue__card reveal">
+        <p class="eyebrow">Место проведения</p>
+        <h2 id="venueName">Ресторан «Усадьба»</h2>
+        <p id="venueCity">Петропавловск</p>
+        <a class="button" id="mapButton" href="#" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>С любовью,</p>
+      <h2>Larissa &amp; Vladislav</h2>
+      <p>До встречи 22 августа 2026</p>
+    </footer>
+  </main>
+</body>
+</html>

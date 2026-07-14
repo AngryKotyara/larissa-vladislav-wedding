@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Администратор приглашений</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css" />
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <header>
+      <p class="eyebrow">Larissa & Vladislav</p>
+      <h1>Персональные приглашения</h1>
+      <p>Введите имя гостя или пары — система создаст персональную ссылку, которую можно сразу скопировать или отправить.</p>
+    </header>
+
+    <section class="panel">
+      <form id="guestForm">
+        <label>Имя гостя или пары
+          <input id="guestName" required placeholder="Например: Анна и Сергей" autocomplete="off" />
+        </label>
+        <label>Обращение
+          <select id="greeting">
+            <option value="Дорогие">Дорогие</option>
+            <option value="Дорогая">Дорогая</option>
+            <option value="Дорогой">Дорогой</option>
+            <option value="Уважаемые">Уважаемые</option>
+          </select>
+        </label>
+        <label>Адрес опубликованного сайта
+          <input id="siteUrl" type="url" placeholder="https://ваш-домен.kz/" />
+          <small>До публикации можно оставить пустым: будет использован текущий адрес.</small>
+        </label>
+        <button type="submit">Создать приглашение</button>
+      </form>
+    </section>
+
+    <section class="panel result" id="result" hidden>
+      <h2>Ссылка готова</h2>
+      <input id="generatedLink" readonly />
+      <div class="actions">
+        <button id="copyLink" type="button">Скопировать</button>
+        <a id="whatsappLink" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a id="telegramLink" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a id="previewLink" target="_blank" rel="noopener noreferrer">Открыть приглашение</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="list-head">
+        <div><p class="eyebrow">Список</p><h2>Созданные приглашения</h2></div>
+        <button class="secondary" id="exportCsv" type="button">Экспорт CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Гость</th><th>Ссылка</th><th>Действия</th></tr></thead>
+          <tbody id="guestList"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="emptyState">Пока приглашений нет.</p>
+    </section>
+  </main>
+</body>
+</html>
